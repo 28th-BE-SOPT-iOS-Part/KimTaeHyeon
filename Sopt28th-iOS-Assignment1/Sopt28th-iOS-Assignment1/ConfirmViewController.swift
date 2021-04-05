@@ -7,14 +7,13 @@
 
 import UIKit
 
+// 3번 뷰 컨트롤러
 // 확인 뷰 컨트롤러
 class ConfirmViewController: UIViewController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction func confirmButtonClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
 }
