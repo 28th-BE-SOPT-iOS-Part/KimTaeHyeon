@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ce-0m-Z7e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="e5S-fQ-1px">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="9ce-0m-Z7e" customClass="ProfileViewController" customModule="Sopt28th_iOS_Assignment1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLa-Xh-5XE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyM-Mz-32L">
+                                <rect key="frame" x="18" y="58" width="13" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="rjQ-rl-G7h"/>
+                                    <constraint firstAttribute="width" constant="13" id="urx-TJ-LNd"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="profileCloseBtn"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="9ce-0m-Z7e" eventType="touchUpInside" id="VBu-gf-96Z"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileUserImg" translatesAutoresizingMaskIntoConstraints="NO" id="uth-TL-VCR">
+                                <rect key="frame" x="158.5" y="564" width="97" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Tpq-dT-jBR"/>
+                                    <constraint firstAttribute="width" constant="97" id="cCh-9r-uND"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김솝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvC-Su-lja">
+                                <rect key="frame" x="183.5" y="668" width="47" height="22"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8J2-RC-ll7">
+                                <rect key="frame" x="0.0" y="732" width="414" height="1"/>
+                                <color key="backgroundColor" red="0.62352941176470589" green="0.65490196078431373" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="KHQ-AI-Ltp"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-XS-wva">
+                                <rect key="frame" x="57" y="753" width="300" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upj-TT-pIb">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="muq-RN-2wR"/>
+                                            <constraint firstAttribute="width" constant="100" id="pQf-VH-jrH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="8.5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="40"/>
+                                        <state key="normal" title="나와의 채팅" image="profileTalkImg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad8-q8-5p5">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="CDy-d4-muz"/>
+                                            <constraint firstAttribute="height" constant="100" id="wp7-5S-s0Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="8.5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="40"/>
+                                        <state key="normal" title="프로필 편집" image="profileEditImg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj4-H8-mha">
+                                        <rect key="frame" x="200" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Jma-OY-W4x"/>
+                                            <constraint firstAttribute="height" constant="100" id="yTR-qC-E7A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="8.5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="40"/>
+                                        <state key="normal" title="카카오스토리" image="profileStoryImg">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qwh-ks-OIi"/>
+                        <color key="backgroundColor" red="0.52941176470588236" green="0.56862745098039214" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MyM-Mz-32L" firstAttribute="leading" secondItem="Qwh-ks-OIi" secondAttribute="leading" constant="18" id="8c6-hx-s5d"/>
+                            <constraint firstAttribute="trailing" secondItem="8J2-RC-ll7" secondAttribute="trailing" id="Azz-9v-WBV"/>
+                            <constraint firstItem="8J2-RC-ll7" firstAttribute="top" secondItem="WvC-Su-lja" secondAttribute="bottom" constant="42" id="EWN-gI-4Xf"/>
+                            <constraint firstItem="Qwh-ks-OIi" firstAttribute="bottom" secondItem="uth-TL-VCR" secondAttribute="bottom" constant="202" id="OAS-nT-Jaj"/>
+                            <constraint firstItem="cMd-XS-wva" firstAttribute="top" secondItem="8J2-RC-ll7" secondAttribute="bottom" constant="20" id="P0z-1C-rds"/>
+                            <constraint firstItem="8J2-RC-ll7" firstAttribute="leading" secondItem="pLa-Xh-5XE" secondAttribute="leading" id="P6M-af-0Wa"/>
+                            <constraint firstItem="cMd-XS-wva" firstAttribute="centerX" secondItem="pLa-Xh-5XE" secondAttribute="centerX" id="Wx1-Qn-3YD"/>
+                            <constraint firstItem="WvC-Su-lja" firstAttribute="centerX" secondItem="uth-TL-VCR" secondAttribute="centerX" id="fen-4e-CFL"/>
+                            <constraint firstItem="WvC-Su-lja" firstAttribute="top" secondItem="uth-TL-VCR" secondAttribute="bottom" constant="8" id="jYP-kx-kud"/>
+                            <constraint firstItem="uth-TL-VCR" firstAttribute="centerX" secondItem="pLa-Xh-5XE" secondAttribute="centerX" id="oSG-If-Iv7"/>
+                            <constraint firstItem="MyM-Mz-32L" firstAttribute="top" secondItem="Qwh-ks-OIi" secondAttribute="top" constant="14" id="zD8-7p-Rja"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a80-9F-VI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68.115942028985515" y="-140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profileCloseBtn" width="14" height="14"/>
+        <image name="profileEditImg" width="19.5" height="21.5"/>
+        <image name="profileStoryImg" width="20.5" height="23.5"/>
+        <image name="profileTalkImg" width="20.5" height="19.5"/>
+        <image name="profileUserImg" width="97" height="96"/>
+    </resources>
+</document>

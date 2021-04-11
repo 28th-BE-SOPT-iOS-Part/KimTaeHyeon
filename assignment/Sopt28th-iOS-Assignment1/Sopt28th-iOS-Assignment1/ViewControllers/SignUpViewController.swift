@@ -26,8 +26,12 @@ class SignUpViewController: UIViewController {
     // MARK: - 새로운 카카오계정 만들기 버튼 클릭
     @IBAction func makeNewKakaoAccountButtonClicked(_ sender: Any) {
         // 뷰컨 인스턴스 생성
-        guard let confirmVC = storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        confirmVC.modalPresentationStyle = .overFullScreen
+        // guard let confirmVC = storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
+        // confirmVC.modalPresentationStyle = .overFullScreen
+        
+        // 홈 화면으로 이동 (탭바 컨트롤러)
+        let homeVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(identifier: "HomeTabBarController")
+        homeVC.modalPresentationStyle = .overFullScreen
         
         // 텍스트필드 nil값 체크
         guard let emailOrPhoneNumber = emailOrPhoneNumberTextField.text else { return }
@@ -38,8 +42,8 @@ class SignUpViewController: UIViewController {
         // - 비밀번호와 비밀번호 확인의 값이 같을때만
         if emailOrPhoneNumber.isEmpty == false && password.isEmpty == false && passwordConfirm.isEmpty == false {
             if password == passwordConfirm {
-                confirmVC.emailOrPhoneNumber = emailOrPhoneNumber
-                self.present(confirmVC, animated: true, completion: nil)
+//                confirmVC.emailOrPhoneNumber = emailOrPhoneNumber
+                self.present(homeVC, animated: true, completion: nil)
             }
         }
     }

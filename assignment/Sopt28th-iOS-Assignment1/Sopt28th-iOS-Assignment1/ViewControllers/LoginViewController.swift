@@ -36,8 +36,12 @@ class LoginViewController: UIViewController {
     // MARK: - 카카오계정 로그인 버튼 클릭
     @IBAction func kakaoAccountLoginButtonClicked(_ sender: Any) {
         // 뷰컨 인스턴스 생성
-        guard let confirmVC = storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        confirmVC.modalPresentationStyle = .overFullScreen
+        // guard let confirmVC = storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
+        // 홈 화면 인스턴스
+        
+        // 같은 스토리보드 내에 있는 것이 아니라, 다른 스토리보드에 있을 때는 UIStoryboard를 이용해서 인스턴스 생성
+        let homeVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(identifier: "HomeTabBarController")
+        homeVC.modalPresentationStyle = .overFullScreen
         
         // 텍스트필드 nil값 체크
         guard let emailOrPhoneNumber = emailOrPhoneNumberTextField.text else { return }
@@ -45,8 +49,8 @@ class LoginViewController: UIViewController {
         
         // 텍스트 필드에 값이 모두 존재할때만 화면전환
         if emailOrPhoneNumber.isEmpty == false && password.isEmpty == false {
-            confirmVC.emailOrPhoneNumber = emailOrPhoneNumber
-            self.present(confirmVC, animated: true, completion: nil)
+            // homeVC.emailOrPhoneNumber = emailOrPhoneNumber
+            self.present(homeVC, animated: true, completion: nil)
         }
     }
     
