@@ -244,7 +244,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="o4n-rb-dXC" kind="unwind" identifier="unwindLoginVC" animates="NO" unwindAction="unwindLoginVCWithSegue:" id="hcM-vw-AoW"/>
+                                    <segue destination="o4n-rb-dXC" kind="unwind" identifier="unwindLoginVC" unwindAction="unwindLoginVCWithSegue:" id="hcM-vw-AoW"/>
                                 </connections>
                             </button>
                         </subviews>
