@@ -104,7 +104,7 @@
                             <constraint firstItem="WvC-Su-lja" firstAttribute="centerX" secondItem="uth-TL-VCR" secondAttribute="centerX" id="fen-4e-CFL"/>
                             <constraint firstItem="WvC-Su-lja" firstAttribute="top" secondItem="uth-TL-VCR" secondAttribute="bottom" constant="8" id="jYP-kx-kud"/>
                             <constraint firstItem="uth-TL-VCR" firstAttribute="centerX" secondItem="pLa-Xh-5XE" secondAttribute="centerX" id="oSG-If-Iv7"/>
-                            <constraint firstItem="MyM-Mz-32L" firstAttribute="top" secondItem="Qwh-ks-OIi" secondAttribute="top" constant="14" id="zD8-7p-Rja"/>
+                            <constraint firstItem="MyM-Mz-32L" firstAttribute="top" secondItem="pLa-Xh-5XE" secondAttribute="top" constant="58" id="zD8-7p-Rja"/>
                         </constraints>
                     </view>
                 </viewController>

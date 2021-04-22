@@ -52,7 +52,7 @@
 		BD35E73526189DE500AA7796 = {
 			isa = PBXGroup;
 			children = (
-				BD35E74026189DE500AA7796 /* Sopt28th-iOS-Assignment1 */,
+				BD35E74026189DE500AA7796 /* Sopt28th-KakaoTalk-Clone */,
 				BD35E73F26189DE500AA7796 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,19 +65,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD35E74026189DE500AA7796 /* Sopt28th-iOS-Assignment1 */ = {
+		BD35E74026189DE500AA7796 /* Sopt28th-KakaoTalk-Clone */ = {
 			isa = PBXGroup;
 			children = (
 				BD35E74126189DE500AA7796 /* AppDelegate.swift */,
 				BD35E74326189DE500AA7796 /* SceneDelegate.swift */,
-				BD35E74C26189DE600AA7796 /* LaunchScreen.storyboard */,
 				BD35E74726189DE500AA7796 /* Main.storyboard */,
+				BD35E74C26189DE600AA7796 /* LaunchScreen.storyboard */,
 				BD6E71472623150A005A4186 /* ViewControllers */,
 				BD6E714926231527005A4186 /* Storyboards */,
 				BD35E74A26189DE600AA7796 /* Assets.xcassets */,
 				BD35E74F26189DE600AA7796 /* Info.plist */,
 			);
-			path = "Sopt28th-iOS-Assignment1";
+			path = "Sopt28th-KakaoTalk-Clone";
 			sourceTree = "<group>";
 		};
 		BD6E71472623150A005A4186 /* ViewControllers */ = {
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BD35E73926189DE500AA7796 /* Build configuration list for PBXProject "Sopt28th-iOS-Assignment1" */;
+			buildConfigurationList = BD35E73926189DE500AA7796 /* Build configuration list for PBXProject "Sopt28th-KakaoTalk-Clone" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -328,15 +328,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W895YM7ZMH;
-				INFOPLIST_FILE = "Sopt28th-iOS-Assignment1/Info.plist";
+				INFOPLIST_FILE = "Sopt28th-KakaoTalk-Clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.taekki.ios.Sopt28th-iOS-Assignment1";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.taekki.ios.Sopt28th-KakaoTalk-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -347,22 +348,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W895YM7ZMH;
-				INFOPLIST_FILE = "Sopt28th-iOS-Assignment1/Info.plist";
+				INFOPLIST_FILE = "Sopt28th-KakaoTalk-Clone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "dev.taekki.ios.Sopt28th-iOS-Assignment1";
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.taekki.ios.Sopt28th-KakaoTalk-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD35E73926189DE500AA7796 /* Build configuration list for PBXProject "Sopt28th-iOS-Assignment1" */ = {
+		BD35E73926189DE500AA7796 /* Build configuration list for PBXProject "Sopt28th-KakaoTalk-Clone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BD35E75026189DE600AA7796 /* Debug */,
