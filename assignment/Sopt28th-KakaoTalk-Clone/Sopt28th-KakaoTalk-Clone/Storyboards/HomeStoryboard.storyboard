@@ -67,7 +67,7 @@
                             <constraint firstItem="m1A-yE-wwe" firstAttribute="leading" secondItem="vBG-Xu-q8A" secondAttribute="leading" constant="13" id="aKT-nw-Y7c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="friend" selectedImage="friend.fill" id="chc-lb-zns"/>
+                    <tabBarItem key="tabBarItem" title="" image="friendTabIcon" selectedImage="friendTabIconSelected" id="chc-lb-zns"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGd-qC-vNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +95,7 @@
                             <constraint firstItem="M5D-YR-86v" firstAttribute="centerY" secondItem="X72-r6-c9a" secondAttribute="centerY" id="eYR-ZU-AtH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="chat" selectedImage="chat.fill" id="Sl5-kQ-Ziw"/>
+                    <tabBarItem key="tabBarItem" title="" image="messageTabIcon" selectedImage="messageTabIconSelected" id="Sl5-kQ-Ziw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tNu-S3-5an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +123,7 @@
                             <constraint firstItem="YTL-2l-sRS" firstAttribute="centerX" secondItem="jDR-2B-zBV" secondAttribute="centerX" id="R9V-gm-8U6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="hash" selectedImage="hash.fill" id="bds-Qp-tRw"/>
+                    <tabBarItem key="tabBarItem" title="" image="searchTabIcon" selectedImage="searchTabIconSelected" id="bds-Qp-tRw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQp-Ac-tqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +151,7 @@
                             <constraint firstItem="gSv-Gm-wck" firstAttribute="centerY" secondItem="uQh-lI-wSQ" secondAttribute="centerY" id="2Jf-AN-9Rc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="shop" selectedImage="shop.fill" id="54E-aC-hb2"/>
+                    <tabBarItem key="tabBarItem" title="" image="shopTabIcon" selectedImage="shopTabIconSelected" id="54E-aC-hb2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qVg-dm-5kX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +179,7 @@
                             <constraint firstItem="aAv-5A-IVo" firstAttribute="centerX" secondItem="Jt6-20-OHE" secondAttribute="centerX" id="QOL-JO-Dk5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="more" selectedImage="more.fill" id="ydB-9X-VSO"/>
+                    <tabBarItem key="tabBarItem" title="" image="detailTabIcon" selectedImage="detailTabIconSelected" id="ydB-9X-VSO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThO-td-7Xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,17 +187,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chat" width="50" height="50"/>
-        <image name="chat.fill" width="50" height="50"/>
-        <image name="friend" width="50" height="50"/>
-        <image name="friend.fill" width="50" height="50"/>
+        <image name="detailTabIcon" width="21" height="5"/>
+        <image name="detailTabIconSelected" width="21" height="5"/>
+        <image name="friendTabIcon" width="18" height="20"/>
+        <image name="friendTabIconSelected" width="18" height="20"/>
         <image name="friendtabProfileImg" width="59" height="58"/>
-        <image name="hash" width="50" height="50"/>
-        <image name="hash.fill" width="50" height="50"/>
-        <image name="more" width="50" height="50"/>
-        <image name="more.fill" width="50" height="50"/>
-        <image name="shop" width="50" height="50"/>
-        <image name="shop.fill" width="50" height="50"/>
+        <image name="messageTabIcon" width="20.5" height="19.5"/>
+        <image name="messageTabIconSelected" width="20.5" height="19.5"/>
+        <image name="searchTabIcon" width="15" height="17.5"/>
+        <image name="searchTabIconSelected" width="15" height="17.5"/>
+        <image name="shopTabIcon" width="19.5" height="19"/>
+        <image name="shopTabIconSelected" width="19.5" height="19"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
