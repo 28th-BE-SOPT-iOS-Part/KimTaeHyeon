@@ -162,6 +162,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="friendTabIcon" selectedImage="friendTabIconSelected" id="chc-lb-zns"/>
+                    <connections>
+                        <outlet property="tableView" destination="bop-g0-ELl" id="tYb-Q0-QVI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGd-qC-vNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
