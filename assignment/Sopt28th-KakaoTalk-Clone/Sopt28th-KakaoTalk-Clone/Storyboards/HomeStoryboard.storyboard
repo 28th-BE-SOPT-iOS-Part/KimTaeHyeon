@@ -373,6 +373,10 @@
                                                 <constraint firstItem="uDY-wr-JxU" firstAttribute="leading" secondItem="L9h-Zx-pmx" secondAttribute="leading" id="oyr-ag-VFW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="hPH-oy-dsx" id="tig-bD-eC5"/>
+                                            <outlet property="menuNameLabel" destination="uDY-wr-JxU" id="oWJ-sz-swC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -398,6 +402,9 @@
                     <tabBarItem key="tabBarItem" title="" image="detailTabIcon" selectedImage="detailTabIconSelected" id="ydB-9X-VSO"/>
                     <connections>
                         <outlet property="collectionView" destination="Qsl-M0-UEf" id="gdz-OY-83Z"/>
+                        <outlet property="userEmailLabel" destination="fnC-8g-lJT" id="04b-f5-AoU"/>
+                        <outlet property="userNameLabel" destination="GH3-ae-eb5" id="mhL-gE-fgd"/>
+                        <outlet property="userProfileImage" destination="bNx-w9-TBD" id="wqS-dT-iAF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThO-td-7Xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
