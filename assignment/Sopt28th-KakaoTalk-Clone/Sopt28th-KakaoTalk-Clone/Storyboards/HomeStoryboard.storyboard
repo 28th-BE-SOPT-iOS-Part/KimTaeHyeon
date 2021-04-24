@@ -92,7 +92,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상태메시지는 여기에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Frb-Ha-k1Y">
                                                     <rect key="frame" x="83" y="44" width="89" height="13.5"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -129,7 +129,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEN-bU-ZHg">
                                                     <rect key="frame" x="68" y="27" width="25" height="12"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -145,6 +145,11 @@
                                                 <constraint firstItem="BOc-Ay-hx5" firstAttribute="leading" secondItem="1kH-f4-aEL" secondAttribute="trailing" constant="11" id="xKC-es-Uaw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="BOc-Ay-hx5" id="0hn-bP-b9E"/>
+                                            <outlet property="profileImage" destination="1kH-f4-aEL" id="NdK-Wz-eZg"/>
+                                            <outlet property="stateLabel" destination="vEN-bU-ZHg" id="sHU-tm-7ZL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
