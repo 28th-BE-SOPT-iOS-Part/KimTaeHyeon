@@ -76,6 +76,7 @@ extension FriendViewController {
 
 extension FriendViewController: UITableViewDelegate {
     
+    // 셀 높이 - 셀 별로 다른 높이 부여
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
@@ -85,6 +86,35 @@ extension FriendViewController: UITableViewDelegate {
         default:
             return 0
         }
+    }
+    
+    // 셀 클릭 시 동작, 화면전환시키기
+    // [] 셀 클릭 시 선택 상태 유지되어있는거 고치기 (회색으로 되어있는 거)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let profileVC = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+        profileVC.modalPresentationStyle = .overFullScreen
+        
+        // 과연 이게 최선의 코드일까? 고민‼️
+        // 기본이미지는 사진 없는 것이고, 기본이름은 김솝트로 하려고 switch문으로 구분
+        switch indexPath.section {
+        // 친구 목록만 indexPath로 접근
+        case 1:
+            profileVC.imageName = friendList[indexPath.row].imageName
+            profileVC.name = friendList[indexPath.row].name
+        default:
+            profileVC.imageName = "ProfileUserImg"
+            profileVC.name = "김솝트"
+        }
+        
+        // selection blink 효과
+        // 다른 셀 선택하기 전까지 색상 유지되는 것 해제
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.07) {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
+        self.present(profileVC, animated: true, completion: nil)
+        
     }
     
 }

@@ -12,10 +12,24 @@ class ProfileViewController: UIViewController {
     // MARK: - Variables
     var panGestureRecognizer: UIPanGestureRecognizer?
     var initialTouchPoint: CGPoint = CGPoint(x: 0, y: 0)
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var imageName: String = ""
+    var name: String = ""
+    
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let image = UIImage(named: imageName) {
+            profileImage.image = image
+        }
+        nameLabel.text = name
+        
 
         // 팬 제스처에 메서드 연결
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(_:)))
