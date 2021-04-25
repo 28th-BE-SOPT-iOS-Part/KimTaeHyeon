@@ -23,14 +23,33 @@ class FriendViewController: UIViewController {
         setupTableView()
     }
 
+    // 상단바 설정 버튼 클릭시 - 액션시트표시
+    // 항목 (편집, 친구 관리, 친구 설정)
+    @IBAction func settingButtonClicked(_ sender: Any) {
+        
+        let actionSheet = UIAlertController(title: nil,
+                                            message: nil,
+                                            preferredStyle: .actionSheet)
+        actionSheet.pruneNegativeWidthConstraints()
+        
+        for value in ["편집", "친구 관리", "친구 설정"] {
+            actionSheet.addAction(UIAlertAction(title: value,
+                                                style: .default,
+                                                handler: nil))
+        }
+        
+        let alertAction = UIAlertAction(title: "취소",
+                                        style: .cancel,
+                                        handler: nil)
+        actionSheet.addAction(alertAction)
+        
+        present(actionSheet, animated: true, completion: nil)
 
-//    @IBAction func profileButtonClicked(_ sender: Any) {
-//        let profileVC = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(identifier: "ProfileViewController")
-//        profileVC.modalPresentationStyle = .overFullScreen
-//        present(profileVC, animated: true, completion: nil)
-//    }
+    }
+    
 }
 
+// MARK: - Custom Function
 extension FriendViewController {
     func setupTableView() {
         tableView.delegate = self
@@ -74,6 +93,7 @@ extension FriendViewController {
     }
 }
 
+// MARK: - Table View Delegate
 extension FriendViewController: UITableViewDelegate {
     
     // 셀 높이 - 셀 별로 다른 높이 부여
@@ -119,6 +139,7 @@ extension FriendViewController: UITableViewDelegate {
     
 }
 
+// MARK: - Table View Data Source
 extension FriendViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -156,6 +177,14 @@ extension FriendViewController: UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
-    
+}
+
+extension UIAlertController {
+    func pruneNegativeWidthConstraints() {
+        for subView in self.view.subviews {
+            for constraint in subView.constraints where constraint.debugDescription.contains("width == - 16") {
+                subView.removeConstraint(constraint)
+            }
+        }
+    }
 }
