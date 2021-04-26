@@ -16,9 +16,11 @@ class ProfileViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var stateLabel: UILabel!
     
     var imageName: String = ""
     var name: String = ""
+    var state: String = ""
     
 
     // MARK: - Life Cycle
@@ -29,7 +31,7 @@ class ProfileViewController: UIViewController {
             profileImage.image = image
         }
         nameLabel.text = name
-        
+        stateLabel.text = state
 
         // 팬 제스처에 메서드 연결
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(_:)))

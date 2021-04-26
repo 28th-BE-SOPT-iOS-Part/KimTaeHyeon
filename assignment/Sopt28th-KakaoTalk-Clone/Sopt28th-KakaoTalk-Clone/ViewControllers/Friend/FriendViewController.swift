@@ -10,6 +10,9 @@ import UIKit
 class FriendViewController: UIViewController {
 
     // MARK: - Variables
+    var myProfile: FriendDataModel = FriendDataModel(imageName: "profileUserImg",
+                                                     name: "김태현",
+                                                     state: "🍏아요아요아요🍎")
     var friendList: [FriendDataModel] = []
     
     // MARK: - IBOutlet
@@ -122,9 +125,11 @@ extension FriendViewController: UITableViewDelegate {
         case 1:
             profileVC.imageName = friendList[indexPath.row].imageName
             profileVC.name = friendList[indexPath.row].name
+            profileVC.state = friendList[indexPath.row].state
         default:
-            profileVC.imageName = "ProfileUserImg"
-            profileVC.name = "김솝트"
+            profileVC.imageName = myProfile.imageName
+            profileVC.name = myProfile.name
+            profileVC.state = myProfile.state
         }
         
         // selection blink 효과
@@ -162,6 +167,45 @@ extension FriendViewController: UITableViewDelegate {
         
     }
     
+    // Contextual Menu - 미리보기
+    func tableView(_ tableView: UITableView,
+                   contextMenuConfigurationForRowAt indexPath: IndexPath,
+                   point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil,
+                                          previewProvider: {
+                                            // 미리보기 제공
+                                            // 뷰 인스턴스 생성해서 프로필 뷰 미리보기
+                                            let vc = UIStoryboard(name: "ProfileStoryboard", bundle: nil).instantiateViewController(identifier: "ProfileViewController") as! ProfileViewController
+                                            
+                                            if indexPath.section == 1 {
+                                                vc.imageName = self.friendList[indexPath.row].imageName
+                                                vc.name = self.friendList[indexPath.row].name
+                                                vc.state = self.friendList[indexPath.row].state
+                                            } else {
+                                                vc.imageName = self.myProfile.imageName
+                                                vc.name = self.myProfile.name
+                                                vc.state = self.myProfile.state
+                                            }
+                                            
+                                            
+                                            return vc
+                                            
+                                          },
+                                          actionProvider: { suggestionActions in
+            
+            // 컨텍스트 메뉴 구성
+            let chatAction = UIAction(title: "채팅하기", image: nil) { _ in  return }
+            let voiceTalkAction = UIAction(title: "보이스톡", image: nil) { _ in  return }
+            let faceTalkAction = UIAction(title: "페이스톡", image: nil) { _ in  return }
+            let giftAction = UIAction(title: "선물하기", image: nil) { _ in  return }
+            
+            return UIMenu(title: "", children: [chatAction,
+                                                voiceTalkAction,
+                                                faceTalkAction,
+                                                giftAction])
+      })
+    }
+    
 }
 
 // MARK: - Table View Data Source
@@ -188,6 +232,9 @@ extension FriendViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MyProfileTableViewCell.identifier, for: indexPath) as? MyProfileTableViewCell else { return UITableViewCell() }
+            
+            cell.setData(imageName: myProfile.imageName, name: myProfile.name, state: myProfile.state)
+            
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendProfileTableViewCell.identifier, for: indexPath) as? FriendProfileTableViewCell else { return UITableViewCell() }
@@ -204,6 +251,8 @@ extension FriendViewController: UITableViewDataSource {
     }
 }
 
+// alert controller 사용시 알 수 없는 제약조건 생기는 문제 해결 위한 익스텐션
+// -16 제약조건 가진 뷰 모두 제거
 extension UIAlertController {
     func pruneNegativeWidthConstraints() {
         for subView in self.view.subviews {

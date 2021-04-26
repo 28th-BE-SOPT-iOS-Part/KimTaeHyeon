@@ -91,6 +91,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상태메시지는 여기에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jg-Ey-8oA">
+                                <rect key="frame" x="154.5" y="695" width="105" height="16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qwh-ks-OIi"/>
                         <color key="backgroundColor" red="0.52941176470588236" green="0.56862745098039214" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,11 +104,13 @@
                             <constraint firstItem="MyM-Mz-32L" firstAttribute="leading" secondItem="Qwh-ks-OIi" secondAttribute="leading" constant="18" id="8c6-hx-s5d"/>
                             <constraint firstAttribute="trailing" secondItem="8J2-RC-ll7" secondAttribute="trailing" id="Azz-9v-WBV"/>
                             <constraint firstItem="8J2-RC-ll7" firstAttribute="top" secondItem="WvC-Su-lja" secondAttribute="bottom" constant="42" id="EWN-gI-4Xf"/>
+                            <constraint firstItem="6Jg-Ey-8oA" firstAttribute="top" secondItem="WvC-Su-lja" secondAttribute="bottom" constant="5" id="FQg-dD-4Ek"/>
                             <constraint firstItem="Qwh-ks-OIi" firstAttribute="bottom" secondItem="uth-TL-VCR" secondAttribute="bottom" constant="202" id="OAS-nT-Jaj"/>
                             <constraint firstItem="cMd-XS-wva" firstAttribute="top" secondItem="8J2-RC-ll7" secondAttribute="bottom" constant="20" id="P0z-1C-rds"/>
                             <constraint firstItem="8J2-RC-ll7" firstAttribute="leading" secondItem="pLa-Xh-5XE" secondAttribute="leading" id="P6M-af-0Wa"/>
                             <constraint firstItem="cMd-XS-wva" firstAttribute="centerX" secondItem="pLa-Xh-5XE" secondAttribute="centerX" id="Wx1-Qn-3YD"/>
                             <constraint firstItem="WvC-Su-lja" firstAttribute="centerX" secondItem="uth-TL-VCR" secondAttribute="centerX" id="fen-4e-CFL"/>
+                            <constraint firstItem="6Jg-Ey-8oA" firstAttribute="centerX" secondItem="WvC-Su-lja" secondAttribute="centerX" id="hsn-Be-T3Z"/>
                             <constraint firstItem="WvC-Su-lja" firstAttribute="top" secondItem="uth-TL-VCR" secondAttribute="bottom" constant="8" id="jYP-kx-kud"/>
                             <constraint firstItem="uth-TL-VCR" firstAttribute="centerX" secondItem="pLa-Xh-5XE" secondAttribute="centerX" id="oSG-If-Iv7"/>
                             <constraint firstItem="MyM-Mz-32L" firstAttribute="top" secondItem="pLa-Xh-5XE" secondAttribute="top" constant="58" id="zD8-7p-Rja"/>
@@ -111,6 +119,7 @@
                     <connections>
                         <outlet property="nameLabel" destination="WvC-Su-lja" id="7Yn-Dq-Cjx"/>
                         <outlet property="profileImage" destination="uth-TL-VCR" id="0Dd-kr-kAE"/>
+                        <outlet property="stateLabel" destination="6Jg-Ey-8oA" id="aw2-rR-23I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a80-9F-VI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

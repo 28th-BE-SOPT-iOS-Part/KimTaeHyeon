@@ -11,15 +11,24 @@ class MyProfileTableViewCell: UITableViewCell {
     
     static let identifier = "MyProfileTableViewCell"
 
+    @IBOutlet weak var myProfileImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var stateMessageLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    func setData(imageName: String, name: String, state: String) {
+        if let image = UIImage(named: imageName) {
+            myProfileImageView.image = image
+        }
+        userNameLabel.text = name
+        stateMessageLabel.text = state
+    }
 }

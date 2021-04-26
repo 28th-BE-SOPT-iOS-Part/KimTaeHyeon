@@ -110,6 +110,11 @@
                                                 <constraint firstItem="Frb-Ha-k1Y" firstAttribute="leading" secondItem="sjJ-3w-gBn" secondAttribute="trailing" constant="11" id="wSX-Lk-lTa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="myProfileImageView" destination="sjJ-3w-gBn" id="fJh-l3-FgQ"/>
+                                            <outlet property="stateMessageLabel" destination="Frb-Ha-k1Y" id="gxW-dn-4hF"/>
+                                            <outlet property="userNameLabel" destination="EUb-TV-E3T" id="4gu-qN-PyW"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendProfileTableViewCell" rowHeight="50" id="Dsl-e2-d2a" customClass="FriendProfileTableViewCell" customModule="Sopt28th_iOS_Assignment1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="101" width="414" height="50"/>
