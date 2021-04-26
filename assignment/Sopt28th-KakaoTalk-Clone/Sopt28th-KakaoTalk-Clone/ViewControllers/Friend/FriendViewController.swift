@@ -137,6 +137,31 @@ extension FriendViewController: UITableViewDelegate {
         
     }
     
+    // 오른쪽 스와이프시 취할 액션
+    // cf. leadingSwipeActionsConfigurationForRowAt
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        // 차단 메뉴
+        let blockAction = UIContextualAction(style: .destructive,
+                                              title: "차단",
+                                              handler: { (ac: UIContextualAction,
+                                                          view: UIView,
+                                                          success: (Bool) -> Void) in return })
+        // 숨김 메뉴
+        let hideAction = UIContextualAction(style: .normal,
+                                            title: "숨김",
+                                            handler: { (ac: UIContextualAction,
+                                                        view: UIView,
+                                                        success: (Bool) -> Void) in return })
+        
+        // swipe menu 색상 변경 가능
+        hideAction.backgroundColor = .darkGray
+        
+        // 먼저 들어간 순서대로, 오른쪽 ▶︎ 왼쪽순
+        return UISwipeActionsConfiguration(actions: [blockAction, hideAction])
+        
+    }
+    
 }
 
 // MARK: - Table View Data Source
