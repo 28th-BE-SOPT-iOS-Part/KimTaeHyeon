@@ -187,7 +187,6 @@ extension FriendViewController: UITableViewDelegate {
                                                 vc.state = self.myProfile.state
                                             }
                                             
-                                            
                                             return vc
                                             
                                           },
