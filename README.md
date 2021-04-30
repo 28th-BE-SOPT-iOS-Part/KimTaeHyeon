@@ -16,7 +16,7 @@
 | :------: | :--------------: |  :---: |:-:|:-:|:-:|
 | 1 | iOS기초, H.I.G를 통한 컴포넌트의 이해, View 화면 전환 | <img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%"> | <img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%"> | <img src="https://user-images.githubusercontent.com/61109660/115691630-32a61100-a399-11eb-86f8-f6e5eb329b00.gif" width="25%"> | - |
 | 2 | Autolayout을 통한 기초 UI 구성, Scroll View의 이해 | <img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%"> |<img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%">| <img src="https://user-images.githubusercontent.com/61109660/115691630-32a61100-a399-11eb-86f8-f6e5eb329b00.gif" width="25%"> | - |
-| 3 | TableView, CollectionView, 데이터 전달 방식의 이해 | - | - | - | - |
+| 3 | TableView, CollectionView, 데이터 전달 방식의 이해 | <img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%"> |<img src="https://user-images.githubusercontent.com/61109660/115692676-2a020a80-a39a-11eb-9ade-9a8fae2ba393.png" width="25%">| <img src="https://user-images.githubusercontent.com/61109660/115691630-32a61100-a399-11eb-86f8-f6e5eb329b00.gif" width="25%"> | - |
 | 4 | Cocoapod & Networking + 솝커톤 전 보충 세미나 | - | - | - | - | 
 | 5 | 디자인 합동 세미나 | - | - |- | - | 
 | 6 | 서버 합동 세미나 + 솝커톤 | - | - |- | - | 
