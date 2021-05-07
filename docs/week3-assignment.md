@@ -7,7 +7,10 @@
 진짜 구조 복잡해지면 한도 끝도 없이 어려워질 것 같아서 기초부터 탄탄히 해야할 것 같아요...
 ```
 
+<br>
+
 ## 1) 진행기간: **20210424(토) 세미나 후 ~ 20210507(금) 11:59pm**
+최대한 그 때 그 때 과제를 해보도록.. 노력을...🙃
 
 <br>
 
@@ -15,15 +18,15 @@
 
 - 일반과제 (1 ~ 3)
 
-<img width="200" alt="week3-g1" src="https://user-images.githubusercontent.com/61109660/117447547-9ffc9900-af78-11eb-8164-09243d914c87.png">
-<img width="200" alt="week3-g2" src="https://user-images.githubusercontent.com/61109660/117447541-9f640280-af78-11eb-9200-d7232bc89378.png">
-<img width="200" alt="week3-g3" src="https://user-images.githubusercontent.com/61109660/117447529-9b37e500-af78-11eb-9c47-810806a3d882.png">
+	<img width="200" alt="week3-g1" src="https://user-images.githubusercontent.com/61109660/117447547-9ffc9900-af78-11eb-8164-09243d914c87.png" />
+	<img width="200" alt="week3-g2" src="https://user-images.githubusercontent.com/61109660/117447541-9f640280-af78-11eb-9200-d7232bc89378.png" />
+	<img width="200" alt="week3-g3" src="https://user-images.githubusercontent.com/61109660/117447529-9b37e500-af78-11eb-9c47-810806a3d882.png" />
 
 - 도전과제 (1 ~ 3)
 
-<img width="200" alt="week3-c1" src="https://user-images.githubusercontent.com/61109660/117447752-d4705500-af78-11eb-8835-118bcf9b449f.png">
-<img width="200" alt="week3-c2" src="https://user-images.githubusercontent.com/61109660/117447746-d33f2800-af78-11eb-94c7-5172f8a75ab1.png">
-<img width="200" alt="week3-c3" src="https://user-images.githubusercontent.com/61109660/117447734-cf130a80-af78-11eb-8d1d-ec964d4b1d35.png">
+	<img width="200" alt="week3-c1" src="https://user-images.githubusercontent.com/61109660/117447752-d4705500-af78-11eb-8835-118bcf9b449f.png">
+	<img width="200" alt="week3-c2" src="https://user-images.githubusercontent.com/61109660/117447746-d33f2800-af78-11eb-94c7-5172f8a75ab1.png">
+	<img width="200" alt="week3-c3" src="https://user-images.githubusercontent.com/61109660/117447734-cf130a80-af78-11eb-8d1d-ec964d4b1d35.png">
 ---
 
 <br>
@@ -66,6 +69,7 @@
     }
 
     // MARK: - Custom Function
+    
     extension FriendViewController {
         func setupTableView() {
             tableView.delegate = self
@@ -160,12 +164,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
 
-		// - 🙋🏻‍♂️ 여기에요!! 프로퍼티를 만들어 주었습니다.
+    // - 🙋🏻‍♂️ 여기에요!! 프로퍼티를 만들어 주었습니다.
     var imageName: String = ""
     var name: String = ""
     var state: String = ""
 
-		// ... (아래 코드 생략)
+    // ... (아래 코드 생략)
 ```
 
 다시 FriendViewController로 돌아와서 테이블셀 클릭 시 일어날 이벤트를 처리해주겠습니다 ~~~!!!!
@@ -178,7 +182,9 @@ class ProfileViewController: UIViewController {
 // MARK: - Table View Delegate
 extension FriendViewController: UITableViewDelegate {
 
+
 		// ... (코드 중략)
+		
 
     // 셀 클릭 시 동작, 화면전환시키기
     // [] 셀 클릭 시 선택 상태 유지되어있는거 고치기 (회색으로 되어있는 거)
@@ -221,6 +227,31 @@ extension FriendViewController: UITableViewDelegate {
 
 <br>
 
+### + 셀 선택(클릭)시 효과 (TableViewCell Selection Blink ✨)
+
+![non-blink](https://user-images.githubusercontent.com/61109660/117451767-e7d1ef00-af7d-11eb-9b98-61948d9da3df.gif)
+![blink](https://user-images.githubusercontent.com/61109660/117451575-a4778080-af7d-11eb-89b4-4b80b47f953d.gif)
+
+
+(왼쪽이 기본 상태, 오른쪽이 코드를 적용한 상태)
+
+
+따로 처리를 해주지 않으면 셀을 선택하고 다시 돌아와서 다른 셀을 선택하려 했을 때 포커싱이 유지되어 있는 것을 볼 수 있습니다.  
+그래서 보통 selectionStyle을 .none으로 설정해주면서 아예 효과를 주지 않는 경우도 종종 보이는데요.. \
+근데 내가 어떤 셀을 선택했는지는 알아야 하기에... 잠깐만 반짝거리는 효과를 주고 싶었습니다!!! 
+찾아보니! 셀 선택 후 몇 초 후에 deselectRow()메서드를 실행해서 포커싱이 유지되어 있는 것을 해제해주더라구요 😯
+
+```swift
+// selection blink 효과
+// 다른 셀 선택하기 전까지 색상 유지되는 것 해제
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.07) {
+    tableView.deselectRow(at: indexPath, animated: true)
+}
+```
+요 코드를 tableView didSelectRowAt 메서드 안에 작성해주면 됩니다~
+
+<br>
+
 ### CollectionView 구현하기 (일반과제 3 관련)
 
 컬렉션뷰 셋업 같은 경우도 위에 테이블뷰 셋업 처럼 처리하고 있어여~~!! 위에서 참고해주세요~!~!~!
@@ -233,7 +264,7 @@ ha ha ,,, 허전하니까 여기에도 코드 추가!!!
 
 extension DetailViewController {
 
-		// UI 셋업
+    // UI 셋업
     fileprivate func configureUI() {
 
         // 일단 기본값으로 세팅하기는 하는데 이 부분은 조금 고민 필요
@@ -245,16 +276,16 @@ extension DetailViewController {
 
     }
 
-		// 컬렉션 뷰 셋업
+    // 컬렉션 뷰 셋업
     fileprivate func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
-		// 더미데이터 넣는 함수
+    
+    // 더미데이터 넣는 함수
     fileprivate func setMenuList() {
-			// ... (내용 생략)
-		}
+	// ... (내용 생략)
+    }
 
 }
 ```
@@ -277,7 +308,7 @@ extension DetailViewController {
 
 extension DetailViewController: UICollectionViewDelegateFlowLayout {
 
-		// 셀 크기 조정하기!! (스크린 사이즈를 잡아주고 들어가야, 모든 기기에서 동일한 비율을 얻을 수 있음)
+    // 셀 크기 조정하기!! (스크린 사이즈를 잡아주고 들어가야, 모든 기기에서 동일한 비율을 얻을 수 있음)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenSize = UIScreen.main.bounds.width
         let widthSize = screenSize * (70 / 375)
@@ -286,21 +317,24 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: widthSize, height: heightSize)
     }
 
-		// 라인 간격
+    // 라인 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 3
     }
 
-		// 아이템 간격
+    // 아이템 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 19
     }
 
-		// 컬렉션뷰 여백 (padding)
+    // 컬렉션뷰 여백 (padding)
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
 }
 ```
 
+<br>
+
 ### 도전과제 내용 정리는 다시 하도록 할게요 ...❗️
+미리미리 문서로 정리했어햐 했는데 밀리니까 너무 귀찮..다..😅
