@@ -35,4 +35,4 @@
 |  <center>분류</center> |  <center>내용</center> |  <center>README 이동</center> |  <center>기간</center> 
 |:--------:|:--------:|:--------:|:--------:|
 |**3주차 세미나**|TableView, CollectionView, 데이터 전달 방식의 이해|-| 21.04.24(토)
-|**3주차 과제**|TableView, CollectionView, 데이터 전달, <br> ActionSheet, TableView Swipe Menu, Contextual Menu|[🥸 바로가기](https://github.com/28th-BE-SOPT-iOS-Part/KimTaeHyeon)| 21.04.24(토) ~ 21.05.07(금)
+|**3주차 과제**|TableView, CollectionView, 데이터 전달, <br> ActionSheet, TableView Swipe Menu, Contextual Menu|[🥸 바로가기](https://github.com/28th-BE-SOPT-iOS-Part/KimTaeHyeon/blob/main/docs/week3-assignment.md)| 21.04.24(토) ~ 21.05.07(금)
