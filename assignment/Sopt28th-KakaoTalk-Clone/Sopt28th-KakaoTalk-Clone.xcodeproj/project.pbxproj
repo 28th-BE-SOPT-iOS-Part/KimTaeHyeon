@@ -27,6 +27,8 @@
 		BD6E7153262321DE005A4186 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E7152262321DE005A4186 /* ProfileViewController.swift */; };
 		BD6E71562623275D005A4186 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E71552623275D005A4186 /* FriendViewController.swift */; };
 		BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3702646B6DB004728F5 /* NetworkResult.swift */; };
+		BDF1E3732646B7DF004728F5 /* LoginRequestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3722646B7DF004728F5 /* LoginRequestDataModel.swift */; };
+		BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		BD6E7152262321DE005A4186 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD6E71552623275D005A4186 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		BDF1E3702646B6DB004728F5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		BDF1E3722646B7DF004728F5 /* LoginRequestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDataModel.swift; sourceTree = "<group>"; };
+		BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		CB747ED42D3F3046818D23D3 /* Pods-Sopt28th-iOS-Assignment1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28th-iOS-Assignment1/Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,8 @@
 		BDF1E36C2646B532004728F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1E3722646B7DF004728F5 /* LoginRequestDataModel.swift */,
+				BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,9 +386,11 @@
 				BD35E75726189E1B00AA7796 /* LoginViewController.swift in Sources */,
 				BD35E74226189DE500AA7796 /* AppDelegate.swift in Sources */,
 				BD6E71562623275D005A4186 /* FriendViewController.swift in Sources */,
+				BDF1E3732646B7DF004728F5 /* LoginRequestDataModel.swift in Sources */,
 				BD35E75E26189E6C00AA7796 /* ConfirmViewController.swift in Sources */,
 				BD35E74426189DE500AA7796 /* SceneDelegate.swift in Sources */,
 				BD208D5F26346DF400D28742 /* DetailMenuCollectionViewCell.swift in Sources */,
+				BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */,
 				BD208D5526345E5F00D28742 /* FriendDataModel.swift in Sources */,
 				BD35E75A26189E5800AA7796 /* SignUpViewController.swift in Sources */,
 				BD208D5126342F8F00D28742 /* FriendProfileTableViewCell.swift in Sources */,
