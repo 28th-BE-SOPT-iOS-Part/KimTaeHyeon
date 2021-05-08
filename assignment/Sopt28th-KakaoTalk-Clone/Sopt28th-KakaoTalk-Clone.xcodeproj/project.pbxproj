@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -72,13 +72,13 @@
 				CB747ED42D3F3046818D23D3 /* Pods-Sopt28th-iOS-Assignment1.debug.xcconfig */,
 				7C593AC1E5474BF0CE1F3819 /* Pods-Sopt28th-iOS-Assignment1.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		BD208D4B26342F3A00D28742 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1E36A2646B263004728F5 /* Profile */,
 				BD208D5326345E5000D28742 /* Model */,
 				BD208D4C26342F4500D28742 /* Cell */,
 				BD6E71552623275D005A4186 /* FriendViewController.swift */,
@@ -150,29 +150,13 @@
 		BD35E74026189DE500AA7796 /* Sopt28th-KakaoTalk-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1E3662646B1FE004728F5 /* Sources */,
 				BD35E74126189DE500AA7796 /* AppDelegate.swift */,
 				BD35E74326189DE500AA7796 /* SceneDelegate.swift */,
-				BD35E74726189DE500AA7796 /* Main.storyboard */,
-				BD35E74C26189DE600AA7796 /* LaunchScreen.storyboard */,
-				BD6E71472623150A005A4186 /* ViewControllers */,
-				BD6E714926231527005A4186 /* Storyboards */,
 				BD35E74A26189DE600AA7796 /* Assets.xcassets */,
 				BD35E74F26189DE600AA7796 /* Info.plist */,
 			);
 			path = "Sopt28th-KakaoTalk-Clone";
-			sourceTree = "<group>";
-		};
-		BD6E71472623150A005A4186 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BD208D4B26342F3A00D28742 /* Friend */,
-				BD208D5826346D7900D28742 /* Detail */,
-				BD35E75626189E1B00AA7796 /* LoginViewController.swift */,
-				BD35E75926189E5800AA7796 /* SignUpViewController.swift */,
-				BD35E75D26189E6C00AA7796 /* ConfirmViewController.swift */,
-				BD6E7152262321DE005A4186 /* ProfileViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		BD6E714926231527005A4186 /* Storyboards */ = {
@@ -182,6 +166,69 @@
 				BD6E714F262321D2005A4186 /* ProfileStoryboard.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BDF1E3662646B1FE004728F5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BD35E74726189DE500AA7796 /* Main.storyboard */,
+				BD35E74C26189DE600AA7796 /* LaunchScreen.storyboard */,
+				BD6E714926231527005A4186 /* Storyboards */,
+				BDF1E3682646B238004728F5 /* Login */,
+				BDF1E3692646B247004728F5 /* SignUp */,
+				BD208D4B26342F3A00D28742 /* Friend */,
+				BD208D5826346D7900D28742 /* Detail */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BDF1E3682646B238004728F5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BDF1E36C2646B532004728F5 /* Model */,
+				BDF1E36D2646B577004728F5 /* DataManager */,
+				BD35E75626189E1B00AA7796 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BDF1E3692646B247004728F5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD35E75926189E5800AA7796 /* SignUpViewController.swift */,
+				BDF1E36B2646B272004728F5 /* Confirm */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		BDF1E36A2646B263004728F5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BD6E7152262321DE005A4186 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BDF1E36B2646B272004728F5 /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				BD35E75D26189E6C00AA7796 /* ConfirmViewController.swift */,
+			);
+			path = Confirm;
+			sourceTree = "<group>";
+		};
+		BDF1E36C2646B532004728F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDF1E36D2646B577004728F5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		ED9D377708C00AD18FC59773 /* Frameworks */ = {
