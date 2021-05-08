@@ -29,6 +29,8 @@
 		BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3702646B6DB004728F5 /* NetworkResult.swift */; };
 		BDF1E3732646B7DF004728F5 /* LoginRequestDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3722646B7DF004728F5 /* LoginRequestDataModel.swift */; };
 		BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */; };
+		BDF1E3772646B95E004728F5 /* LoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3762646B95E004728F5 /* LoginDataService.swift */; };
+		BDF1E3792646BA6A004728F5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3782646BA6A004728F5 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		BDF1E3702646B6DB004728F5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		BDF1E3722646B7DF004728F5 /* LoginRequestDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestDataModel.swift; sourceTree = "<group>"; };
 		BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
+		BDF1E3762646B95E004728F5 /* LoginDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataService.swift; sourceTree = "<group>"; };
+		BDF1E3782646BA6A004728F5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		CB747ED42D3F3046818D23D3 /* Pods-Sopt28th-iOS-Assignment1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28th-iOS-Assignment1/Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +240,7 @@
 		BDF1E36D2646B577004728F5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1E3762646B95E004728F5 /* LoginDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF1E3702646B6DB004728F5 /* NetworkResult.swift */,
+				BDF1E3782646BA6A004728F5 /* APIConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -390,9 +396,11 @@
 				BD35E75E26189E6C00AA7796 /* ConfirmViewController.swift in Sources */,
 				BD35E74426189DE500AA7796 /* SceneDelegate.swift in Sources */,
 				BD208D5F26346DF400D28742 /* DetailMenuCollectionViewCell.swift in Sources */,
+				BDF1E3772646B95E004728F5 /* LoginDataService.swift in Sources */,
 				BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */,
 				BD208D5526345E5F00D28742 /* FriendDataModel.swift in Sources */,
 				BD35E75A26189E5800AA7796 /* SignUpViewController.swift in Sources */,
+				BDF1E3792646BA6A004728F5 /* APIConstants.swift in Sources */,
 				BD208D5126342F8F00D28742 /* FriendProfileTableViewCell.swift in Sources */,
 				BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */,
 				BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */,
