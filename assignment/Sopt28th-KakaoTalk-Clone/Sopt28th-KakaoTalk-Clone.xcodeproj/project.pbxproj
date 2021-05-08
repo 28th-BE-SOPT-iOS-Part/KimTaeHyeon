@@ -26,6 +26,7 @@
 		BD6E7150262321D2005A4186 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6E714F262321D2005A4186 /* ProfileStoryboard.storyboard */; };
 		BD6E7153262321DE005A4186 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E7152262321DE005A4186 /* ProfileViewController.swift */; };
 		BD6E71562623275D005A4186 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E71552623275D005A4186 /* FriendViewController.swift */; };
+		BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3702646B6DB004728F5 /* NetworkResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		BD6E714F262321D2005A4186 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		BD6E7152262321DE005A4186 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD6E71552623275D005A4186 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		BDF1E3702646B6DB004728F5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		CB747ED42D3F3046818D23D3 /* Pods-Sopt28th-iOS-Assignment1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28th-iOS-Assignment1/Pods-Sopt28th-iOS-Assignment1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		BD35E74026189DE500AA7796 /* Sopt28th-KakaoTalk-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				BDF1E36E2646B629004728F5 /* Configuration */,
 				BDF1E3662646B1FE004728F5 /* Sources */,
 				BD35E74126189DE500AA7796 /* AppDelegate.swift */,
 				BD35E74326189DE500AA7796 /* SceneDelegate.swift */,
@@ -186,7 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF1E36C2646B532004728F5 /* Model */,
-				BDF1E36D2646B577004728F5 /* DataManager */,
+				BDF1E36D2646B577004728F5 /* Service */,
 				BD35E75626189E1B00AA7796 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -224,11 +227,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BDF1E36D2646B577004728F5 /* DataManager */ = {
+		BDF1E36D2646B577004728F5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = DataManager;
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BDF1E36E2646B629004728F5 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BDF1E36F2646B692004728F5 /* Network */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		BDF1E36F2646B692004728F5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BDF1E3702646B6DB004728F5 /* NetworkResult.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		ED9D377708C00AD18FC59773 /* Frameworks */ = {
@@ -368,6 +387,7 @@
 				BD35E75A26189E5800AA7796 /* SignUpViewController.swift in Sources */,
 				BD208D5126342F8F00D28742 /* FriendProfileTableViewCell.swift in Sources */,
 				BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */,
+				BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
