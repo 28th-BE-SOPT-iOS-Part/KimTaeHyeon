@@ -35,22 +35,30 @@ class LoginViewController: UIViewController {
     
     // MARK: - 카카오계정 로그인 버튼 클릭
     @IBAction func kakaoAccountLoginButtonClicked(_ sender: Any) {
-        // 뷰컨 인스턴스 생성
-        // guard let confirmVC = storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        // 홈 화면 인스턴스
-        
-        // 같은 스토리보드 내에 있는 것이 아니라, 다른 스토리보드에 있을 때는 UIStoryboard를 이용해서 인스턴스 생성
-        let homeVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(identifier: "HomeTabBarController")
-        homeVC.modalPresentationStyle = .overFullScreen
         
         // 텍스트필드 nil값 체크
         guard let emailOrPhoneNumber = emailOrPhoneNumberTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        // 텍스트 필드에 값이 모두 존재할때만 화면전환
+        // 텍스트 필드에 값이 모두 존재할때만 로그인 시도
         if emailOrPhoneNumber.isEmpty == false && password.isEmpty == false {
-            // homeVC.emailOrPhoneNumber = emailOrPhoneNumber
-            self.present(homeVC, animated: true, completion: nil)
+
+            LoginDataService.shared.postLogin(email: emailOrPhoneNumber, password: password) { result in
+                switch result {
+                case .success(let message):
+                    if let message = message as? String {
+                        self.didSuccessSignIn(message)
+                    }
+                case .requestErr(let message):
+                    if let message = message as? String {
+                        self.didFailSignIn(message)
+                    }
+                default:
+                    print("ERROR")
+                }
+                
+
+            }
         }
     }
     
@@ -77,6 +85,25 @@ extension LoginViewController {
         for button in buttons {
             button.layer.cornerRadius = 4
         }
+    }
+    
+    private func didSuccessSignIn(_ message: String) {
+        self.presentAlert(title: "알림",
+                          message: message) { _ in
+            
+            // 같은 스토리보드 내에 있는 것이 아니라, 다른 스토리보드에 있을 때는 UIStoryboard를 이용해서 인스턴스 생성
+            let homeVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(identifier: "HomeTabBarController")
+            homeVC.modalPresentationStyle = .overFullScreen
+            
+            self.present(homeVC, animated: true, completion: nil)
+            
+        }
+    }
+    
+    private func didFailSignIn(_ message: String) {
+        self.presentAlert(title: "알림",
+                          message: message,
+                          okAction: nil)
     }
 }
 

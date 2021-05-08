@@ -22,7 +22,13 @@ import Foundation
 struct LoginResponseDataModel: Codable {
     let success: Bool
     let message: String
-    let data: LoginResponse
+    let data: LoginResponse?
+    
+    enum CodingKeys: String, CodingKey {
+        case success
+        case message
+        case data
+    }
 }
 
 // MARK: - DataClass
