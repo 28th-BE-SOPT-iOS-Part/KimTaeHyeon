@@ -15,6 +15,7 @@
 		BD208D5F26346DF400D28742 /* DetailMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD208D5E26346DF400D28742 /* DetailMenuCollectionViewCell.swift */; };
 		BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD208D622634718A00D28742 /* DetailMenuDataModel.swift */; };
 		BD225324264D8047004E1C12 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD225323264D8047004E1C12 /* SignUpDataModel.swift */; };
+		BD225326264D82B3004E1C12 /* SignUpDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD225325264D82B3004E1C12 /* SignUpDataService.swift */; };
 		BD35E74226189DE500AA7796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35E74126189DE500AA7796 /* AppDelegate.swift */; };
 		BD35E74426189DE500AA7796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35E74326189DE500AA7796 /* SceneDelegate.swift */; };
 		BD35E74926189DE500AA7796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD35E74726189DE500AA7796 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		BD208D5E26346DF400D28742 /* DetailMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD208D622634718A00D28742 /* DetailMenuDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuDataModel.swift; sourceTree = "<group>"; };
 		BD225323264D8047004E1C12 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
+		BD225325264D82B3004E1C12 /* SignUpDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataService.swift; sourceTree = "<group>"; };
 		BD35E73E26189DE500AA7796 /* Sopt28th-iOS-Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sopt28th-iOS-Assignment1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD35E74126189DE500AA7796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD35E74326189DE500AA7796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		BD225322264D8019004E1C12 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				BD225325264D82B3004E1C12 /* SignUpDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */,
 				BD225324264D8047004E1C12 /* SignUpDataModel.swift in Sources */,
 				BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */,
+				BD225326264D82B3004E1C12 /* SignUpDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
