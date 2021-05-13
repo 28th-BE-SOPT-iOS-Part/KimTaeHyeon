@@ -14,6 +14,7 @@
 		BD208D5A26346D8E00D28742 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD208D5926346D8E00D28742 /* DetailViewController.swift */; };
 		BD208D5F26346DF400D28742 /* DetailMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD208D5E26346DF400D28742 /* DetailMenuCollectionViewCell.swift */; };
 		BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD208D622634718A00D28742 /* DetailMenuDataModel.swift */; };
+		BD225324264D8047004E1C12 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD225323264D8047004E1C12 /* SignUpDataModel.swift */; };
 		BD35E74226189DE500AA7796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35E74126189DE500AA7796 /* AppDelegate.swift */; };
 		BD35E74426189DE500AA7796 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD35E74326189DE500AA7796 /* SceneDelegate.swift */; };
 		BD35E74926189DE500AA7796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD35E74726189DE500AA7796 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		BD208D5926346D8E00D28742 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BD208D5E26346DF400D28742 /* DetailMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD208D622634718A00D28742 /* DetailMenuDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuDataModel.swift; sourceTree = "<group>"; };
+		BD225323264D8047004E1C12 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
 		BD35E73E26189DE500AA7796 /* Sopt28th-iOS-Assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sopt28th-iOS-Assignment1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD35E74126189DE500AA7796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD35E74326189DE500AA7796 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BD225321264D8014004E1C12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD225323264D8047004E1C12 /* SignUpDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD225322264D8019004E1C12 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		BD35E73526189DE500AA7796 = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +223,10 @@
 		BDF1E3692646B247004728F5 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				BD35E75926189E5800AA7796 /* SignUpViewController.swift */,
 				BDF1E36B2646B272004728F5 /* Confirm */,
+				BD225321264D8014004E1C12 /* Model */,
+				BD225322264D8019004E1C12 /* Service */,
+				BD35E75926189E5800AA7796 /* SignUpViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -411,6 +430,7 @@
 				BD208D5126342F8F00D28742 /* FriendProfileTableViewCell.swift in Sources */,
 				BDF1E37C2646C011004728F5 /* UIViewController + makeAlert.swift in Sources */,
 				BD208D632634718A00D28742 /* DetailMenuDataModel.swift in Sources */,
+				BD225324264D8047004E1C12 /* SignUpDataModel.swift in Sources */,
 				BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
