@@ -45,9 +45,9 @@ class LoginViewController: UIViewController {
 
             LoginDataService.shared.postLogin(email: emailOrPhoneNumber, password: password) { result in
                 switch result {
-                case .success(let message):
-                    if let message = message as? String {
-                        self.didSuccessSignIn(message)
+                case .success(let data):
+                    if let data = data as? LoginResponseDataModel {
+                        self.didSuccessSignIn(data)
                     }
                 case .requestErr(let message):
                     if let message = message as? String {
@@ -87,9 +87,31 @@ extension LoginViewController {
         }
     }
     
-    private func didSuccessSignIn(_ message: String) {
+    private func didSuccessSignIn(_ data: LoginResponseDataModel) {
+        
+        let data = data
+        
+        // MARK: - 토큰 저장
+        // [x] 뷰컨에서 데이터 관련 처리를 직접하기보다는, 여기서 처리하는게 더 나아보임 (주관적)
+        // -> 서비스 코드에서는 성공, 실패 여부만 파악하고
+        // -> 데이터 처리는 뷰컨에서 한다.
+        // 일단 토큰이 있든 없든 내부저장소에서 가져온다.
+        let token = UserDefaults.standard.string(forKey: "token")
+
+        // 없으면 새로 저장
+        if token == nil {
+            if let token = data.data?.token {
+                // UserDefaults에 token 저장안되어있을때만, 새롭게 저장
+                UserDefaults.standard.setValue(token, forKey: "token")
+                print("토큰 새로저장: \(token)")
+            }
+        } else {
+            print("이미 토큰 존재 \(String(describing: token))")
+        }
+        
+        // MARK: - 통신 성공 시 홈으로 화면 전환
         self.presentAlert(title: "알림",
-                          message: message) { _ in
+                          message: data.message) { _ in
             
             // 같은 스토리보드 내에 있는 것이 아니라, 다른 스토리보드에 있을 때는 UIStoryboard를 이용해서 인스턴스 생성
             let homeVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(identifier: "HomeTabBarController")
