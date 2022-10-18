@@ -28,6 +28,7 @@
 		BD6E7150262321D2005A4186 /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6E714F262321D2005A4186 /* ProfileStoryboard.storyboard */; };
 		BD6E7153262321DE005A4186 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E7152262321DE005A4186 /* ProfileViewController.swift */; };
 		BD6E71562623275D005A4186 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E71552623275D005A4186 /* FriendViewController.swift */; };
+		BDA5FD9228FEC7D900B4E3DD /* besopt.docc in Sources */ = {isa = PBXBuildFile; fileRef = BDA5FD9128FEC7D900B4E3DD /* besopt.docc */; };
 		BDF1E3712646B6DB004728F5 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3702646B6DB004728F5 /* NetworkResult.swift */; };
 		BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */; };
 		BDF1E3772646B95E004728F5 /* LoginDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1E3762646B95E004728F5 /* LoginDataService.swift */; };
@@ -60,6 +61,7 @@
 		BD6E714F262321D2005A4186 /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		BD6E7152262321DE005A4186 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BD6E71552623275D005A4186 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		BDA5FD9128FEC7D900B4E3DD /* besopt.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = besopt.docc; sourceTree = "<group>"; };
 		BDF1E3702646B6DB004728F5 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		BDF1E3742646B819004728F5 /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		BDF1E3762646B95E004728F5 /* LoginDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataService.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		BD35E73526189DE500AA7796 = {
 			isa = PBXGroup;
 			children = (
+				BDA5FD9128FEC7D900B4E3DD /* besopt.docc */,
 				BD35E74026189DE500AA7796 /* Sopt28th-KakaoTalk-Clone */,
 				BD35E73F26189DE500AA7796 /* Products */,
 				96ADF4B0DE5F76DACB3A7C1C /* Pods */,
@@ -425,6 +428,7 @@
 				BD35E75E26189E6C00AA7796 /* ConfirmViewController.swift in Sources */,
 				BD35E74426189DE500AA7796 /* SceneDelegate.swift in Sources */,
 				BD208D5F26346DF400D28742 /* DetailMenuCollectionViewCell.swift in Sources */,
+				BDA5FD9228FEC7D900B4E3DD /* besopt.docc in Sources */,
 				BDF1E3772646B95E004728F5 /* LoginDataService.swift in Sources */,
 				BDF1E3752646B819004728F5 /* LoginResponseDataModel.swift in Sources */,
 				BD208D5526345E5F00D28742 /* FriendDataModel.swift in Sources */,
